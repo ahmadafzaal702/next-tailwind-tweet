@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import profile_pic from "../../public/Profile_pic.png";
+import Span from "./shared/Span";
+import IconDiv from "./shared/IconDiv";
 
 import { GoKebabHorizontal } from "react-icons/go";
 import { FaRegComment, FaRetweet } from "react-icons/fa";
@@ -31,10 +33,13 @@ const Tweet = () => {
             <div className="flex">
               <Link href="http://twitter.com">
                 <strong className="text-gray-800 mr-1">Afzaal Ahmad </strong>
-                <span className="text-gray-500 mr-1">@ahmadafzaal</span>
+                {/* custom shared component */}
+                <Span>@ahmadafzaal</Span>
               </Link>
-              <span className="text-gray-500 mr-1">&middot;</span>
-              <span className="text-gray-500 mr-1">Mar 22</span>
+
+              <Span>&middot;</Span>
+
+              <Span>Mar 22</Span>
             </div>
             <div className="ml-auto ">
               <GoKebabHorizontal />
@@ -58,28 +63,29 @@ const Tweet = () => {
            
            */}
           <div className="mt-2 flex justify-between ">
-            <div className="flex items-center text-gray-600">
+            {/* custom shared component */}
+            <IconDiv>
               <FaRegComment className="mr-1" />
               <span>20</span>
-            </div>
+            </IconDiv>
 
-            <div className="flex items-center text-gray-600">
+            <IconDiv>
               <FaRetweet className="mr-1" />
               <span>17</span>
-            </div>
+            </IconDiv>
 
-            <div className="flex items-center text-gray-600">
+            <IconDiv>
               <AiOutlineHeart className="mr-1" />
               <span>215</span>
-            </div>
+            </IconDiv>
 
-            <div className="flex items-center text-gray-600">
+            <IconDiv>
               <AiOutlineUpload className="mr-1" />
-            </div>
+            </IconDiv>
 
-            <div className="flex items-center text-gray-600">
+            <IconDiv>
               <BsBarChart className="mr-1" />
-            </div>
+            </IconDiv>
           </div>
         </div>
       </div>
